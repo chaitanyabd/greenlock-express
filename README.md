@@ -9,5 +9,5 @@ greenlock-express / letsencrypt-express
 | [greenlock-hapi](https://git.daplie.com/Daplie/greenlock-hapi)
 |
 
-[greenlock-express](https://git.daplie.com/Daplie/greenlock-express) (previously named [letsencrypt-express](htttps://git.daplie.com/Daplie/greenlock-express))
+[greenlock-express](https://git.daplie.com/Daplie/greenlock-express) (previously named [letsencrypt-express](https://git.daplie.com/Daplie/greenlock-express))
 has moved to https://git.daplie.com/Daplie/greenlock-express
