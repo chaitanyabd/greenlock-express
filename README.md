@@ -1,18 +1,3 @@
-<!-- BANNER_TPL_BEGIN -->
-
-About Daplie: We're taking back the Internet!
---------------
-
-Down with Google, Apple, and Facebook!
-
-We're re-decentralizing the web and making it read-write again - one home cloud system at a time.
-
-Tired of serving the Empire? Come join the Rebel Alliance:
-
-<a href="mailto:jobs@daplie.com">jobs@daplie.com</a> | [Invest in Daplie on Wefunder](https://daplie.com/invest/) | [Pre-order Cloud](https://daplie.com/preorder/), The World's First Home Server for Everyone
-
-<!-- BANNER_TPL_END -->
-
 greenlock-express (letsencrypt-express)
 =================
 
@@ -206,3 +191,4 @@ Brief overview of some simple options for `node-greenlock`:
   * A callback `function (opts, certs, cb) { cb(null, { options: opts, certs: certs }); }` for setting `email`, `agreeTos`, `domains`, etc (as shown in usage example above)
 * `opts.renewWithin` is the **maximum** number of days (in ms) before expiration to renew a certificate.
 * `opts.renewBy` is the **minimum** number of days (in ms) before expiration to renew a certificate.
+
