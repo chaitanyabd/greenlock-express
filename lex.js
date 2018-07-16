@@ -9,7 +9,7 @@ module.exports.create = function (opts) {
     res.end("Hello, World!\nWith Love,\nLet's Encrypt Express");
   };
 
-  opts.listen = function (plainPort, port) {
+  opts.listen = function (plainPort, port, IP) {
     var PromiseA;
     try {
       PromiseA = require('bluebird');
@@ -37,7 +37,7 @@ module.exports.create = function (opts) {
 
     plainPorts.forEach(function (p) {
       promises.push(new PromiseA(function (resolve, reject) {
-        require('http').createServer(le.middleware(require('redirect-https')())).listen(p, function () {
+        require('http').createServer(le.middleware(require('redirect-https')())).listen(p, IP, function () {
           console.log("Handling ACME challenges and redirecting to https on plain port " + p);
           resolve();
         }).on('error', reject);
@@ -46,7 +46,7 @@ module.exports.create = function (opts) {
 
     ports.forEach(function (p) {
       promises.push(new PromiseA(function (resolve, reject) {
-        var server = require('https').createServer(le.httpsOptions, le.middleware(le.app)).listen(p, function () {
+        var server = require('https').createServer(le.httpsOptions, le.middleware(le.app)).listen(p, IP, function () {
           console.log("Handling ACME challenges and serving https " + p);
           resolve();
         }).on('error', reject);
